@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18704BFB19961AA000F600BD"
-               BuildableName = "PathToExile"
-               BlueprintName = "PathToExile"
-               ReferencedContainer = "container:PathToExile.xcodeproj">
+               BlueprintIdentifier = "18B1FEAE19962E5C00753A9B"
+               BuildableName = "PathToExile2"
+               BlueprintName = "PathToExile2"
+               ReferencedContainer = "container:PathToExile2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18704BFB19961AA000F600BD"
-            BuildableName = "PathToExile"
-            BlueprintName = "PathToExile"
-            ReferencedContainer = "container:PathToExile.xcodeproj">
+            BlueprintIdentifier = "18B1FEAE19962E5C00753A9B"
+            BuildableName = "PathToExile2"
+            BlueprintName = "PathToExile2"
+            ReferencedContainer = "container:PathToExile2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18704BFB19961AA000F600BD"
-            BuildableName = "PathToExile"
-            BlueprintName = "PathToExile"
-            ReferencedContainer = "container:PathToExile.xcodeproj">
+            BlueprintIdentifier = "18B1FEAE19962E5C00753A9B"
+            BuildableName = "PathToExile2"
+            BlueprintName = "PathToExile2"
+            ReferencedContainer = "container:PathToExile2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18704BFB19961AA000F600BD"
-            BuildableName = "PathToExile"
-            BlueprintName = "PathToExile"
-            ReferencedContainer = "container:PathToExile.xcodeproj">
+            BlueprintIdentifier = "18B1FEAE19962E5C00753A9B"
+            BuildableName = "PathToExile2"
+            BlueprintName = "PathToExile2"
+            ReferencedContainer = "container:PathToExile2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
