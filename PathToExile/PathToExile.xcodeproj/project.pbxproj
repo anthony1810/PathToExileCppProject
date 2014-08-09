@@ -49,8 +49,8 @@
 			children = (
 				18704C0819961ABF00F600BD /* main.cpp */,
 				18704C0119961AA100F600BD /* PathToExile.1 */,
-				180879C219961DD600122B7F /* libcurl.4.dylib */,
 				18704BFD19961AA000F600BD /* Products */,
+				180879C219961DD600122B7F /* libcurl.4.dylib */,
 			);
 			sourceTree = "<group>";
 		};
