@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18B1FEDA1996303E00753A9B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B1FED91996303E00753A9B /* main.cpp */; };
-		18B1FEDC1996303E00753A9B /* PathToExile.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18B1FEDB1996303E00753A9B /* PathToExile.1 */; };
+		18B1FEE31996308600753A9B /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B1FEE21996308600753A9B /* libcurl.4.dylib */; };
+		18B1FEF2199630A200753A9B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B1FEE4199630A200753A9B /* main.cpp */; };
+		18B1FEF3199630A200753A9B /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 18B1FEE5199630A200753A9B /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +19,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				18B1FEDC1996303E00753A9B /* PathToExile.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -26,8 +26,19 @@
 
 /* Begin PBXFileReference section */
 		18B1FED61996303E00753A9B /* PathToExile */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PathToExile; sourceTree = BUILT_PRODUCTS_DIR; };
-		18B1FED91996303E00753A9B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		18B1FEDB1996303E00753A9B /* PathToExile.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = PathToExile.1; sourceTree = "<group>"; };
+		18B1FEE21996308600753A9B /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcurl.4.dylib; sourceTree = "<group>"; };
+		18B1FEE4199630A200753A9B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		18B1FEE5199630A200753A9B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		18B1FEE7199630A200753A9B /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
+		18B1FEE8199630A200753A9B /* filestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filestream.h; sourceTree = "<group>"; };
+		18B1FEEA199630A200753A9B /* pow10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pow10.h; sourceTree = "<group>"; };
+		18B1FEEB199630A200753A9B /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		18B1FEEC199630A200753A9B /* strfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strfunc.h; sourceTree = "<group>"; };
+		18B1FEED199630A200753A9B /* prettywriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prettywriter.h; sourceTree = "<group>"; };
+		18B1FEEE199630A200753A9B /* rapidjson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rapidjson.h; sourceTree = "<group>"; };
+		18B1FEEF199630A200753A9B /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		18B1FEF0199630A200753A9B /* stringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringbuffer.h; sourceTree = "<group>"; };
+		18B1FEF1199630A200753A9B /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B1FEE31996308600753A9B /* libcurl.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,8 +56,11 @@
 		18B1FECD1996303E00753A9B = {
 			isa = PBXGroup;
 			children = (
-				18B1FED81996303E00753A9B /* PathToExile */,
+				18B1FEE4199630A200753A9B /* main.cpp */,
+				18B1FEE5199630A200753A9B /* Makefile */,
+				18B1FEE6199630A200753A9B /* rapidjson */,
 				18B1FED71996303E00753A9B /* Products */,
+				18B1FEE21996308600753A9B /* libcurl.4.dylib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,13 +72,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18B1FED81996303E00753A9B /* PathToExile */ = {
+		18B1FEE6199630A200753A9B /* rapidjson */ = {
 			isa = PBXGroup;
 			children = (
-				18B1FED91996303E00753A9B /* main.cpp */,
-				18B1FEDB1996303E00753A9B /* PathToExile.1 */,
+				18B1FEE7199630A200753A9B /* document.h */,
+				18B1FEE8199630A200753A9B /* filestream.h */,
+				18B1FEE9199630A200753A9B /* internal */,
+				18B1FEED199630A200753A9B /* prettywriter.h */,
+				18B1FEEE199630A200753A9B /* rapidjson.h */,
+				18B1FEEF199630A200753A9B /* reader.h */,
+				18B1FEF0199630A200753A9B /* stringbuffer.h */,
+				18B1FEF1199630A200753A9B /* writer.h */,
 			);
-			path = PathToExile;
+			path = rapidjson;
+			sourceTree = "<group>";
+		};
+		18B1FEE9199630A200753A9B /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				18B1FEEA199630A200753A9B /* pow10.h */,
+				18B1FEEB199630A200753A9B /* stack.h */,
+				18B1FEEC199630A200753A9B /* strfunc.h */,
+			);
+			path = internal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B1FEDA1996303E00753A9B /* main.cpp in Sources */,
+				18B1FEF3199630A200753A9B /* Makefile in Sources */,
+				18B1FEF2199630A200753A9B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +229,10 @@
 		18B1FEE01996303E00753A9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -204,6 +240,10 @@
 		18B1FEE11996303E00753A9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

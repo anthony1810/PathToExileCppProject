@@ -20,6 +20,7 @@ size_t writeCallback(char* buf, size_t size, size_t nmemb, void* up)
 
 int main()
 {
+    /* I will wipe out this mess soon */
     CURL* curl; //our curl object
 
     curl_global_init(CURL_GLOBAL_ALL); //pretty obvious
