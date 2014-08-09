@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PathToExile2.xcscheme</key>
+		<key>PathToExile.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18B1FEAE19962E5C00753A9B</key>
+		<key>18B1FED51996303E00753A9B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
