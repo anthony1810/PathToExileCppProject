@@ -1,13 +1,13 @@
-CXXFLAGS = -Wall -g -std=c++11 -lcurl
+CXXFLAGS = -Wall -g -lcurl
 
 APP = main
-OBJS = 
+OBJS = Class.o
 
 .PHONY: all
 all: $(APP)
 
 $(APP): $(OBJS)
-
+Class.o: Class.h
 
 
 .PHONY: clean
