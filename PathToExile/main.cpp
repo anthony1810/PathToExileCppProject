@@ -47,22 +47,20 @@ int main()
     std::cout << std::setw(41) << "@Powered by Viothun Inc" << std::endl << std::endl;
     int initialNode;
     int desNode;
-    do{
-        std::cout << "Enter initial node: ";
-        std::cin >> initialNode;
-        std::cout << std::endl;
-        s.dijkstra(initialNode);
+    
+    std::cout << "Enter initial node: ";
+    std::cin >> initialNode;
+    std::cout << std::endl;
+    s.dijkstra(initialNode);
         
-        std::cout << "Enter destination node: ";
-        std::cin >> desNode;
-        std::cout << std::endl;
+    std::cout << "Enter destination node: ";
+    std::cin >> desNode;
+    std::cout << std::endl;
         
         
-        std::cout << "Result Node: ";
-        s.printPath(desNode, skillList);
+    std::cout << "Result Node: ";
+    s.printPath(desNode, skillList);
 
-    }
-    while(initialNode != 1 || desNode != 1);
     
     return 0;
 }
