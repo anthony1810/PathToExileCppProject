@@ -10,6 +10,11 @@
 		18B1FEE31996308600753A9B /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B1FEE21996308600753A9B /* libcurl.4.dylib */; };
 		18B1FEF2199630A200753A9B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B1FEE4199630A200753A9B /* main.cpp */; };
 		18B1FEF3199630A200753A9B /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 18B1FEE5199630A200753A9B /* Makefile */; };
+		18C172381999E35D00933B3B /* Class.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18C172341999E35D00933B3B /* Class.cpp */; };
+		18C172391999E35D00933B3B /* Shortest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18C172361999E35D00933B3B /* Shortest.cpp */; };
+		18C1723C1999E4B300933B3B /* Charater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18C1723A1999E4B300933B3B /* Charater.cpp */; };
+		18C1723F1999E8C800933B3B /* ConnectHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18C1723D1999E8C800933B3B /* ConnectHandler.cpp */; };
+		18D6FA2E199B24D4005BEEEF /* DataPopulater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18D6FA2C199B24D4005BEEEF /* DataPopulater.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +35,14 @@
 		18B1FEE21996308600753A9B /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcurl.4.dylib; sourceTree = "<group>"; };
 		18B1FEE4199630A200753A9B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		18B1FEE5199630A200753A9B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		18C172341999E35D00933B3B /* Class.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Class.cpp; sourceTree = "<group>"; };
+		18C172351999E35D00933B3B /* Class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class.h; sourceTree = "<group>"; };
+		18C172361999E35D00933B3B /* Shortest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shortest.cpp; sourceTree = "<group>"; };
+		18C172371999E35D00933B3B /* Shortest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shortest.h; sourceTree = "<group>"; };
+		18C1723A1999E4B300933B3B /* Charater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Charater.cpp; sourceTree = "<group>"; };
+		18C1723B1999E4B300933B3B /* Charater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Charater.h; sourceTree = "<group>"; };
+		18C1723D1999E8C800933B3B /* ConnectHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectHandler.cpp; sourceTree = "<group>"; };
+		18C1723E1999E8C800933B3B /* ConnectHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectHandler.h; sourceTree = "<group>"; };
 		18CC321619985E5500F1D150 /* allocators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allocators.h; sourceTree = "<group>"; };
 		18CC321719985E5500F1D150 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
 		18CC321819985E5500F1D150 /* encodedstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encodedstream.h; sourceTree = "<group>"; };
@@ -54,6 +67,8 @@
 		18CC322E19985E5500F1D150 /* stringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringbuffer.h; sourceTree = "<group>"; };
 		18CC322F19985E5500F1D150 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
 		18CC3230199887AF00F1D150 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		18D6FA2C199B24D4005BEEEF /* DataPopulater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataPopulater.cpp; sourceTree = "<group>"; };
+		18D6FA2D199B24D4005BEEEF /* DataPopulater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPopulater.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +86,19 @@
 		18B1FECD1996303E00753A9B = {
 			isa = PBXGroup;
 			children = (
+				18C172341999E35D00933B3B /* Class.cpp */,
+				18C172351999E35D00933B3B /* Class.h */,
+				18C1723A1999E4B300933B3B /* Charater.cpp */,
+				18C1723B1999E4B300933B3B /* Charater.h */,
+				18D6FA2C199B24D4005BEEEF /* DataPopulater.cpp */,
+				18D6FA2D199B24D4005BEEEF /* DataPopulater.h */,
+				18C172361999E35D00933B3B /* Shortest.cpp */,
+				18C172371999E35D00933B3B /* Shortest.h */,
+				18C1723D1999E8C800933B3B /* ConnectHandler.cpp */,
+				18C1723E1999E8C800933B3B /* ConnectHandler.h */,
 				1832432F1996803E00798FB4 /* Skilltree.txt */,
-				18B1FEE4199630A200753A9B /* main.cpp */,
 				18CC3230199887AF00F1D150 /* Utility.h */,
+				18B1FEE4199630A200753A9B /* main.cpp */,
 				18B1FEE5199630A200753A9B /* Makefile */,
 				18B1FED71996303E00753A9B /* Products */,
 				18CC321519985E5500F1D150 /* rapidjson */,
@@ -195,7 +220,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B1FEF3199630A200753A9B /* Makefile in Sources */,
+				18C172391999E35D00933B3B /* Shortest.cpp in Sources */,
+				18D6FA2E199B24D4005BEEEF /* DataPopulater.cpp in Sources */,
+				18C172381999E35D00933B3B /* Class.cpp in Sources */,
 				18B1FEF2199630A200753A9B /* main.cpp in Sources */,
+				18C1723C1999E4B300933B3B /* Charater.cpp in Sources */,
+				18C1723F1999E8C800933B3B /* ConnectHandler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
