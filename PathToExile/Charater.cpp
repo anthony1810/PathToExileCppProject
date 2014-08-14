@@ -25,6 +25,11 @@ void Character::setIntelligence(int value){
 void Character::setClassType(std::string value){
     classType = value;
 }
+
+void Character::set_staring_pos(int start_pos){
+    starting_pos=start_pos;
+}
+
 std::string Character::getInfo(){
     std::stringstream ss;
     ss << charId << "- " << classType << std::endl;
@@ -33,4 +38,14 @@ std::string Character::getInfo(){
     ss << "Inteligence: " << intelligence << std::endl << std::endl;
     
     return ss.str();
+}
+
+std::string Character::get_charID(){
+    return charId;
+}
+std::string Character::get_classType(){
+    return classType;
+}
+int Character::get_starting_pos(){
+    return starting_pos;
 }

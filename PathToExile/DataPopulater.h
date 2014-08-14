@@ -13,6 +13,7 @@
 #include <vector>
 #include "Charater.h"
 #include "Class.h"
+#include "Shortest.h"
 #include "rapidjson/document.h"
 #include "rapidjson/filereadstream.h"
 
@@ -25,9 +26,9 @@ public:
     
     static void populateCharacters(std::string filename, std::vector<Character>& characterList);
     
-    static void populateSkills(std::string filename, std::vector<Node>& skillList);
+    static void populateSkills(std::string filename, std::vector<Node>& skillList, Shortest& s);
     
-    static std::string convertToClassType(int heroId, std::string filename);
+    static std::string convertToClassType(int heroId, std::string filename,Character& Character);
 };
 
 #endif /* defined(__PathToExile__DataPopulater__) */

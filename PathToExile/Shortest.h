@@ -2,7 +2,7 @@
 #define _SHORTEST_H_
 #include "Class.h"
 #define GRAPHSIZE 2048
-#define INFINITY GRAPHSIZE*GRAPHSIZE 
+#define INFINITY2 GRAPHSIZE*GRAPHSIZE 
 #define MAX(a, b) ((a > b) ? (a) : (b))
 class Shortest{
 	
@@ -32,7 +32,8 @@ int a;
 // }
 
 
-void printPath(int dest,std::vector<Node> allNode);
+void printPath(int dest,std::vector<Node>& allNode, std::vector<int>& user_tree);
+void printPath(int dest,std::vector<Node>& allNode,int& total_dis);
 
 void dijkstra(int s);
 
