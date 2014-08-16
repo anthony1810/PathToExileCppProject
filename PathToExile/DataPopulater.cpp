@@ -78,7 +78,12 @@ void DataPopulater::populateSkills(std::string filename, std::vector<Node>& skil
        }
        for(rapidjson::Value::ConstValueIterator m2 = c["sd"].Begin(); m2 != c["sd"].End(); ++m2){
             string pre_description=skillList.at(track).get_description();
-            skillList.at(track).add_description( pre_description+ "\n"+m2->GetString());
+            if(!pre_description.empty()){
+                skillList.at(track).add_description( pre_description+ "\n"+m2->GetString());    
+            }else{
+                skillList.at(track).add_description(m2->GetString());    
+            }
+            
        }
        track++;
     }

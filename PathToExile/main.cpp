@@ -13,14 +13,14 @@ Shortest s;
 std::vector<int> user_tree;
 std::vector<Character> charList;
 std::vector<Node> skillList;
-std::string user_stas;
+std::vector<string> user_stas;   
 typedef std::map<int,int>  MAP;
 typedef std::pair<int,int> PAIR;
 
 int get_new_pos(int desNode);
 int main()
 {
-        
+         
     
     //calling populator class to populate 2 vector above
     DataPopulater d;
@@ -68,27 +68,34 @@ int main()
     		initialNode= charList.at(1).get_starting_pos();
     	}
     }
-  	// user_node_description(user_stas,skillList,user_tree);
+  	
     //while loop for entering new destination mode
     while(true){
     	//18663(Minion instability)    21958(Purity of flesh)
     	//19635 (+10 intel below Instability) 49651( +10 intel below arcane vision)
     	//27929 (deep wisdom)  17790(10% flask after deepwisdom) 
     	//22972 (wandslinger) 27415 (+10 intel below deepwisdom)
-    	//56075 (battery) 11420(Elemetal Dom)
+    	//56075 (battery) 11420(Elemetal Dom)  56716(Lightning weaver)
+        //15711 (blast radius)   21934 (spell damage above Elemental)
 	    std::cout << "Enter destination node: ";
 	    std::cin >> desNode;
 	    std::cout << std::endl;
 			        
 		        
 	    std::cout << "Result Node: ";
-	    s.dijkstra(return_count_id_from_real_id(skillList,get_new_pos(desNode)) );
+	    s.dijkstra(return_count_id_from_real_id(skillList,get_new_pos(desNode)) ); 
 	    s.printPath( return_count_id_from_real_id(skillList,desNode) , skillList, user_tree);	
 	    
 	    for (std::vector<int>::iterator i = user_tree.begin(); i != user_tree.end(); ++i)
 	    {
 	    	cout<<(*i)<<" ";
 	    }
+        cout<<"\n";
+        user_node_description(user_stas,skillList,user_tree);
+        for (std::vector<string>::iterator i = user_stas.begin(); i != user_stas.end(); ++i)
+        {
+            cout<< (*i)<<"\n";
+        }
 	    cout<<"\n";
 
     }
@@ -98,7 +105,7 @@ int main()
     
     return 0;
 }
-//this method used to check all the path from the selected node to new destination node
+//this method used to check all the path from all selected node to new destination node
 int get_new_pos(int desNode){
 	MAP squares_map;
 	for (std::vector<int>::iterator i = user_tree.begin(); i != user_tree.end(); ++i)

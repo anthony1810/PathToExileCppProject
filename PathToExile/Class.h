@@ -4,9 +4,10 @@
 #include <vector>
 #include <string>
 #include <sstream>
-#include "boost/regex.hpp"
+#include <boost/regex.hpp>
+#include <boost/algorithm/string.hpp>
 using namespace std;
-
+using namespace boost;
 class Node{
 	
 	
@@ -32,6 +33,10 @@ public:
 int return_count_id_from_real_id(std::vector<Node> all_node,int real_id_para);
 int return_real_id_from_count_id(std::vector<Node> all_node,int count_id_para);
 Node& find_node_based_on_real_id(std::vector<Node> all_node,int real_id);
-void user_node_description(string& stas, std::vector<Node> all_node, std::vector<int> user_tree);
+void user_node_description(std::vector<string>& user_stas, std::vector<Node> all_node, std::vector<int> user_tree);
+
+string get_word_only(string s);
+int get_number_only(string s);
+string combine_2_description(string expression, int i2);
 
 #endif
