@@ -95,7 +95,7 @@ void DataPopulater::populateSkills(std::string filename, std::vector<Node>& skil
         if(a.size()>0){
             for (std::vector<Node>::iterator i2 = a.begin(); i2 != a.end(); ++i2)
             {
-                Shortest::dist[(*i).get_count_id()][(*i2).get_count_id()]=1;    
+                Shortest::dist[ (*i).get_count_id() ][(*i2).get_count_id()]=1;    
                 Shortest::dist[(*i2).get_count_id()][(*i).get_count_id()]=1;    
             }
         }

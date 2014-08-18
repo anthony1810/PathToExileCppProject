@@ -17,10 +17,10 @@ std::vector<string> user_stas;
 typedef std::map<int,int>  MAP;
 typedef std::pair<int,int> PAIR;
 
-int get_new_pos(int desNode);
+int get_new_pos(int desNode,int& max_node);
 int main()
 {
-         
+    int max=15;         
     
     //calling populator class to populate 2 vector above
     DataPopulater d;
@@ -83,21 +83,27 @@ int main()
 			        
 		        
 	    std::cout << "Result Node: ";
-	    s.dijkstra(return_count_id_from_real_id(skillList,get_new_pos(desNode)) ); 
-	    s.printPath( return_count_id_from_real_id(skillList,desNode) , skillList, user_tree);	
-	    
-	    for (std::vector<int>::iterator i = user_tree.begin(); i != user_tree.end(); ++i)
-	    {
-	    	cout<<(*i)<<" ";
-	    }
-        cout<<"\n";
-        user_node_description(user_stas,skillList,user_tree);
-        for (std::vector<string>::iterator i = user_stas.begin(); i != user_stas.end(); ++i)
-        {
-            cout<< (*i)<<"\n";
+        int new_node_start=get_new_pos(desNode,max);
+        if(new_node_start!=-1){
+            s.dijkstra(return_count_id_from_real_id(skillList,new_node_start )) ; 
+         	s.printPath( return_count_id_from_real_id(skillList,desNode) , skillList, user_tree);   
+         // cout<< ((max- user_tree.size())<0 ) <<"  ";
+           
+            for (std::vector<int>::iterator i = user_tree.begin(); i != user_tree.end(); ++i)
+            {
+                cout<<(*i)<<" ";
+            }
+            cout<<"\n";
+            user_node_description(user_stas,skillList,user_tree);
+            for (std::vector<string>::iterator i = user_stas.begin(); i != user_stas.end(); ++i)
+            {
+                cout<< (*i)<<"\n";
+            }
+            cout<<"\n";
+            cout<<max<<" node remain   \n";
+        }else{
+        	cout<<"More than allow"<<max<<" node remain\n";        
         }
-	    cout<<"\n";
-
     }
 
     
@@ -106,7 +112,7 @@ int main()
     return 0;
 }
 //this method used to check all the path from all selected node to new destination node
-int get_new_pos(int desNode){
+int get_new_pos(int desNode,int& max_node){
 	MAP squares_map;
 	for (std::vector<int>::iterator i = user_tree.begin(); i != user_tree.end(); ++i)
 	{	int total_dis=0;
@@ -119,8 +125,13 @@ int get_new_pos(int desNode){
         MAP::iterator it_min = squares_map.begin();
 
         MAP::iterator it_max = squares_map.end();  // points to just past last element
-        --it_max;                                  // points to last element
-        return it_min->second;
+        --it_max;          // points to last element
+        if( max_node - it_min->first <0  ){
+            return -1;
+        }else{       
+        max_node-= (it_min->first-1);                 
+            return it_min->second;
+        }
     }
     return -1; 
 	
