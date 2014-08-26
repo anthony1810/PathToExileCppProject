@@ -70,6 +70,9 @@ int main()
     std::cout << "Enter class id: ";
     std::cin >> class_input;
     std::cout << std::endl;
+    std::cout << "Enter max node: ";
+    std::cin >> max;
+    std::cout << std::endl;
     for(int i=0;i<charList.size();i++){
     	if(class_input == atoi(charList.at(i).get_charID().c_str()) ){
     		initialNode= charList.at(i).get_starting_pos();
