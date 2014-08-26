@@ -14,6 +14,7 @@ std::vector<int> user_tree;
 std::vector<Character> charList;
 std::vector<Node> skillList;
 std::vector<string> user_stas;   
+std::vector<Image> all_image;
 typedef std::map<int,int>  MAP;
 typedef std::pair<int,int> PAIR;
 
@@ -27,24 +28,33 @@ int main()
     
     //populate data to 2 vector
     d.populateCharacters("Skilltree.txt", charList);
-    d.populateSkills("Skilltree.txt", skillList,s);
- 
+    d.populateImage("Skilltree.txt",all_image);
+    d.populateSkills("Skilltree.txt", skillList,s,all_image);
+ 	
+ 	// cout<< return_image_from_image_name(all_image, "Art/2DArt/SkillIcons/passives/chaosresist.png").get_x();
     //testing
     //test character
     // for(int i = 0; i<charList.size(); i++){
     //     std::cout << charList.at(i).getInfo();
     // }
-    
+    //test image
+    // for (std::vector<Image>::iterator i = all_image.begin(); i != all_image.end(); ++i)
+    // {
+    // 	cout<< (*i).get_image_name()<<" "<< (*i).get_x()<<" "<< (*i).get_y()<<" ";
+
+    // }
     //test skills
-    for(int i = 0; i<skillList.size(); i++){
-        std::cout << skillList.at(i).get_real_id() << ": ";
-        std::vector<Node> neighborList = (skillList.at(i)).get_all_neighbor();
-        for(int j = 0; j < neighborList.size(); j++){
-            std::cout << "{" <<neighborList.at(j).get_real_id() << "} ";
-        }
-        cout<<skillList.at(i).get_description();
-        std::cout << std::endl;
-    }
+    // for(int i = 0; i<skillList.size(); i++){
+    //     std::cout << skillList.at(i).get_real_id() << ": ";
+    // //     std::vector<Node> neighborList = (skillList.at(i)).get_all_neighbor();
+    // //     for(int j = 0; j < neighborList.size(); j++){
+    // //         std::cout << "{" <<neighborList.at(j).get_real_id() << "} ";
+    // //     }
+    // //     cout<<skillList.at(i).get_description();
+    //     cout<<skillList.at(i).get_image().get_image_name()<<" "<< skillList.at(i).get_image().get_x()<<" "<<skillList.at(i).get_image().get_y();
+    //     std::cout << std::endl;
+    // }
+
     std::cout << "\n\n\n";
     
     std::cout << "PATH OF EXILE SKILL PARSER" << std::endl;

@@ -26,9 +26,13 @@ public:
     
     static void populateCharacters(std::string filename, std::vector<Character>& characterList);
     
-    static void populateSkills(std::string filename, std::vector<Node>& skillList, Shortest& s);
+    static void populateSkills(std::string filename, std::vector<Node>& skillList, Shortest& s,std::vector<Image>& all_image);
     
     static std::string convertToClassType(int heroId, std::string filename,Character& Character);
+
+    static void populateImage(std::string filename,std::vector<Image>& all_image);
+
+    static void populateImageType(std::string filename,std::vector<Image>& all_image,string node_type);
 };
 
 #endif /* defined(__PathToExile__DataPopulater__) */

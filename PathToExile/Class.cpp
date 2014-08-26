@@ -1,14 +1,18 @@
 #include "Class.h"
 
 int Node::count=0;
+Image Image::nullImage("0",0,0,0,0);
+Node Node::nullNode(0, Image::nullImage );
 
-Node Node::nullNode(0);
 
 void Node::add_neighbor(Node neighbor){
 	all_neighbor.push_back(neighbor);
 }
 void Node::add_description(string descrip){ 
 	description=descrip;
+}
+void Node::add_image(Image img){
+	image=img;
 }
 int Node::get_count_id(){
 	return count_id;
@@ -23,12 +27,39 @@ int Node::get_count_id_from_real_id(int real_id_para){
 		return -1;
 	}
 }
-
+Image& Node::get_image(){
+	return image;
+}
 vector<Node>& Node::get_all_neighbor(){
 	return all_neighbor;
 }
 string Node::get_description(){
 	return description;
+}
+
+string Image::get_image_name(){
+	return image_name;
+}
+int Image::get_x(){
+	return x;
+}
+int Image::get_y(){
+	return y;
+}
+int Image::get_width(){
+	return width;
+}
+int Image::get_height(){
+	return height;
+}
+Image& return_image_from_image_name(std::vector<Image> all_image,string image_name){
+	for (std::vector<Image>::iterator i = all_image.begin(); i != all_image.end(); ++i)
+	{
+		if( image_name.compare( (*i).get_image_name()  )==0 ){
+			return *i;
+		}
+	}
+	return Image::nullImage;
 }
 
 int return_count_id_from_real_id(std::vector<Node> all_node,int real_id_para){
@@ -41,13 +72,14 @@ int return_count_id_from_real_id(std::vector<Node> all_node,int real_id_para){
 	return -1;
 }
 int return_real_id_from_count_id(std::vector<Node> all_node,int count_id_para){
-	for (std::vector<Node>::iterator i = all_node.begin(); i != all_node.end(); ++i)
-	{
-		if(count_id_para== (*i).get_count_id() ){
-			return (*i).get_real_id();
-		}
-	}
-	return -1;	
+	// for (std::vector<Node>::iterator i = all_node.begin(); i != all_node.end(); ++i)
+	// {
+	// 	if(count_id_para== (*i).get_count_id() ){
+	// 		return (*i).get_real_id();
+	// 	}
+	// }
+	// return -1;	
+	return all_node.at(count_id_para-1).get_real_id();
 }
 Node& find_node_based_on_real_id(std::vector<Node> all_node,int real_id){
 	for (std::vector<Node>::iterator i = all_node.begin(); i != all_node.end(); ++i)
