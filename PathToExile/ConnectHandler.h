@@ -16,13 +16,14 @@
 using namespace std;
 
 class ConnectHandler{
-    
+public:
+    static std::string data;
 public:
     ConnectHandler();
     
-    static size_t data_write(void* buf, size_t size, size_t nmemb, void* userp);
+    static size_t writeCallback(char* buf, size_t size, size_t nmemb, void* up);
     
-    CURLcode curl_read(const std::string& url, std::ostream& os, long timeout = 30);
+   static FILE* getContentFromWeb( std::string filename);
     
     void writeWebToFile(std::string filename);
     

@@ -21,7 +21,9 @@ typedef std::pair<int,int> PAIR;
 int get_new_pos(int desNode,int& max_node);
 int main()
 {
-    int max=15;         
+    int max=15;
+    ConnectHandler c;
+    c.writeWebToFile("haha.txt");
     
     //calling populator class to populate 2 vector above
     DataPopulater d;
