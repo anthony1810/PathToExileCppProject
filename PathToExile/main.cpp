@@ -7,7 +7,6 @@
 #include "rapidjson/filereadstream.h"
 #include "Class.h"
 #include "Shortest.h"
-#include "ConnectHandler.h"
 #include "DataPopulater.h"
 Shortest s;
 std::vector<int> user_tree;
@@ -19,15 +18,58 @@ typedef std::map<int,int>  MAP;
 typedef std::pair<int,int> PAIR;
 
 int get_new_pos(int desNode,int& max_node);
+
+string data; //will hold the url's contents
+size_t writeCallback(char* buf, size_t size, size_t nmemb, void* up)
+{ //callback must have this declaration
+    //buf is a pointer to the data that curl has for us
+    //size*nmemb is the size of the buffer
+
+    for (int c = 0; c<size*nmemb; c++)
+    {
+        data.push_back(buf[c]);
+    }
+    return size*nmemb; //tell curl how many bytes we handled
+}
 int main()
 {
     int max=15;
-    ConnectHandler c;
-    c.writeWebToFile("haha.txt");
+    // CURL* curl; //our curl object
+
+    // curl_global_init(CURL_GLOBAL_ALL); //pretty obvious
+    // curl = curl_easy_init();
+
+    // curl_easy_setopt(curl, CURLOPT_URL, "http://www.pathofexile.com/passive-skill-tree");
+    // curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &writeCallback);
+    // curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L); //tell curl to output its progress
+
+    // curl_easy_perform(curl);
+
+    // cout << endl << "Getting data from website" << endl;
+
+    // std::size_t found = data.find("var passiveSkillTreeData = ");
+    // std::size_t found2 = data.find("0.3835]}");
+    // if (found!=std::string::npos){
+    //     std::string str2 = data.substr (found+27,(found2-19)-found);
+    //     ofstream myfile ("Skilltree.txt");
+    //     if (myfile.is_open())
+    //     {	
+    //         myfile<<str2;
+    //         myfile.close();
+    //     }
+    //     else cout << "Unable to open file";
+    //     cout<<"aaaa";
+    // }
+    // // cin.get();
+    
+
+    // curl_easy_cleanup(curl);
+    // curl_global_cleanup();
+     
     
     //calling populator class to populate 2 vector above
     DataPopulater d;
-    
+     
     //populate data to 2 vector
     d.populateCharacters("Skilltree.txt", charList);
     d.populateImage("Skilltree.txt",all_image);

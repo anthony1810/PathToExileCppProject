@@ -1,7 +1,7 @@
 CXXFLAGS =-lboost_regex -Wall -g -std=c++11 -lcurl
 
 APP = main
-OBJS = Class.o  Shortest.o  ConnectHandler.o DataPopulater.o Charater.o
+OBJS = Class.o  Shortest.o DataPopulater.o Charater.o
 
 .PHONY: all
 all: $(APP)
@@ -9,7 +9,6 @@ all: $(APP)
 $(APP): $(OBJS)
 Class.o: Class.h
 Shortest.o: Shortest.h
-ConnectHandler.o:   ConnectHandler.h
 DataPopulater.o:    DataPopulater.h
 Charater.o: Charater.h
 .PHONY: clean
