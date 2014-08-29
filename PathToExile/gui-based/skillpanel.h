@@ -31,6 +31,7 @@ class SkillPanel : public QGraphicsScene
     QGraphicsTextItem* skillPointItem;
 public:
     SkillPanel(QObject* parent, int img_x, int img_y,QString name, QString des);
+    ~SkillPanel();
     void buildGui(int img_x, int img_y,QString name, QString des);
     void updateGui();
 public slots:

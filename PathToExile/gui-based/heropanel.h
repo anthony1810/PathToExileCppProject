@@ -28,9 +28,14 @@ class HeroPanel:public QGraphicsScene
      QGraphicsTextItem* description;
      int title_x;
      int title_y;
+
+     QGraphicsEllipseItem *ellipseStr;
+     QGraphicsEllipseItem *ellipseDex;
+     QGraphicsEllipseItem *ellipseIntel;
+
 public:
     HeroPanel(QObject* parent, QString imageSource, int str, int dex, int intel, QString desctiption);
-    //~ HeroPanel();
+    ~ HeroPanel();
     void buildGui(QString imageSource, int str, int dex, int intel, QString desctiption);
     void updateGui();
     void changeAvatar(QString avatarSrc);

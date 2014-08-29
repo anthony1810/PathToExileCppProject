@@ -31,20 +31,32 @@
 #include <QPixmap>
 #include "herodescription.h"
 #include "skillpanel2.h"
+#include <QProgressBar>
+#include <QTabWidget>
+#include <centercontrol.h>
 
 class Window : public QWidget
 {
     Q_OBJECT
+    QGridLayout *grid;
+    QGraphicsView *leftView;
+    QGraphicsView *leftView2;
+    QGraphicsView *rightView;
+    QGraphicsView *rightView2;
+    QGraphicsView *centerView;
+    CenterControl* centerControl; //this one is a Qtabwidget
+
+
     HeroPanel* heroPanel;
     SkillPanel* skillPanel;
     SkillPanel2* skillPanel2;
+    QGraphicsScene *sceneCenter;
     QComboBox *comboHeroClass;
     QComboBox *comboSkill;
     HeroDescription* heroDescription;
+    QProgressBar* progressBar;
   public:
     Window(QWidget *parent = 0);
+    ~Window();
   public slots:
-    void handleHeroChange(int);
-    void handleSkillChange(int);
-    void handleGoButton();
 };

@@ -202,18 +202,18 @@ CenterControl::~CenterControl(){
     delete heroTitle;
     delete desTitle;
 
-//    delete writeTab;
-//    delete grid2;
-//    delete desUrl;
-//    delete fileName;
-//    delete urlLabel;
-//    delete fileLabel;
+    delete writeTab;
+    delete grid2;
+    delete desUrl;
+    delete fileName;
+    delete urlLabel;
+    delete fileLabel;
 
-    delete customShortestTab;
-    delete cusGrid;
-    delete cusShortestButton;
-    delete initialNodeLabel;
-    delete initialNode;
+//    delete customShortestTab;
+//    delete cusGrid;
+//    delete cusShortestButton;
+//    delete initialNodeLabel;
+//    delete initialNode;
 }
 
 
