@@ -48,3 +48,11 @@ void SkillPanel2::drawLine(int x1,int y1, int x2, int y2){
     this->addLine(x1, y1, x2, y2, paintpen);
 }
 
+SkillPanel2::~SkillPanel2(){
+    this->~QGraphicsScene();
+    delete img2;
+    delete skillNameItem2;
+    delete Description2;
+
+}
+

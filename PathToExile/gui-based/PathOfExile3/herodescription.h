@@ -11,10 +11,11 @@ class HeroDescription : public QGraphicsScene
 public:
     HeroDescription(QObject *parent = 0, QString des=0);
     void changeDes(QString des);
+    ~HeroDescription();
 signals:
 
 public slots:
-
+    //void release();
 };
 
 #endif // HERODESCRIPTION_H

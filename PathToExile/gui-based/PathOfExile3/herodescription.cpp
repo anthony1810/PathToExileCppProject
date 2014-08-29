@@ -12,3 +12,10 @@ void HeroDescription::changeDes(QString des){
     desArea->setText(des);
     desArea->update();
 }
+
+HeroDescription::~HeroDescription(){
+    this->~QGraphicsScene();
+    delete desArea;
+}
+
+

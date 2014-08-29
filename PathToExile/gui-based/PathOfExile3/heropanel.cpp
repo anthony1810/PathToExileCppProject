@@ -22,7 +22,7 @@ void HeroPanel::buildGui(QString imageSource, int str, int dex, int intel, QStri
 
     //add name
     heroNameItem = this->addText(QString("Marauder"));
-    heroNameItem->setPos(18,myImage.height());
+    heroNameItem->setPos(10,myImage.height());
     heroNameItem->setFont(serifFont);
 
 
@@ -33,7 +33,7 @@ void HeroPanel::buildGui(QString imageSource, int str, int dex, int intel, QStri
     int strYAt = myImage.height()+40;
     int strXAt = 20;
 
-    QGraphicsEllipseItem *ellipseStr = this->addEllipse(strXAt,strYAt-10,40,40,blackpen,redBrush);
+    ellipseStr = this->addEllipse(strXAt,strYAt-10,40,40,blackpen,redBrush);
     heroStrItem = this->addText(QString::number(str));
     heroStrItem->setPos(strXAt+10,strYAt);
     ellipseStr->update();
@@ -44,7 +44,7 @@ void HeroPanel::buildGui(QString imageSource, int str, int dex, int intel, QStri
     blackpen.setWidth(6);
     int dexAtX = strXAt+40;
     int dexAtY = strYAt;
-    QGraphicsEllipseItem *ellipseDex = this->addEllipse(dexAtX,dexAtY,40,40,blackpen,greenBrush);
+    ellipseDex = this->addEllipse(dexAtX,dexAtY,40,40,blackpen,greenBrush);
     heroDexItem = this->addText(QString::number(dex));
     heroDexItem->setPos(dexAtX+10, dexAtY+10);
     ellipseDex->update();
@@ -54,7 +54,7 @@ void HeroPanel::buildGui(QString imageSource, int str, int dex, int intel, QStri
     blackpen.setWidth(6);
     int intelxAtX = (strXAt+dexAtX)/2-10;
     int intelAtY = strYAt+25;
-    QGraphicsEllipseItem *ellipseIntel = this->addEllipse(intelxAtX,intelAtY,40,40,blackpen,blueBrush);
+    ellipseIntel = this->addEllipse(intelxAtX,intelAtY,40,40,blackpen,blueBrush);
     herointelItem = this->addText(QString::number(intel));
     herointelItem->setPos(intelxAtX+10, intelAtY+10);
     ellipseIntel->update();
@@ -97,6 +97,20 @@ void HeroPanel::changeIntel(int newIntel){
 
 void HeroPanel::changeDescription(QString newDes){
     description->setPlainText(newDes);
+}
+
+HeroPanel::~HeroPanel(){
+    this->~QGraphicsScene();
+    delete avatar;
+    delete heroNameItem;
+    delete heroStrItem;
+    delete heroDexItem;
+   delete herointelItem;
+    delete description;
+
+    delete ellipseStr;
+    delete ellipseDex;
+   delete ellipseIntel;
 }
 
 
