@@ -35,21 +35,21 @@ class CenterControl : public QTabWidget
     QLabel *heroTitle;
     QLabel *desTitle;
 
-    //Custom Shortest Path
-  //  QWidget* customShortestTab;
-//    QGridLayout* cusGrid;
-//    QPushButton* cusShortestButton;
-//    QLabel* initialNodeLabel;
-//    QComboBox* initialNode;
+   // Custom Shortest Path
+    QWidget* customShortestTab;
+    QGridLayout* cusGrid;
+    QPushButton* cusShortestButton;
+    QLabel* initialNodeLabel;
+    QComboBox* initialNode;
 
 
-    QWidget* writeTab;
-    QGridLayout* grid2;
-    QLineEdit* desUrl;
-    QLineEdit* fileName;
-    QPushButton* writeButton;
-    QLabel* urlLabel;
-    QLabel* fileLabel;
+//    QWidget* writeTab;
+//    QGridLayout* grid2;
+//    QLineEdit* desUrl;
+//    QLineEdit* fileName;
+//    QPushButton* writeButton;
+//    QLabel* urlLabel;
+//    QLabel* fileLabel;
 public:
     CenterControl(QWidget *parent = 0, HeroPanel* heroPanel=0, HeroDescription* desPanel=0, SkillPanel* skillPanel1=0, SkillPanel2* skillPanel2=0, QGraphicsScene* sceneCenter=0,QProgressBar* progressBar=0);
     ~CenterControl();

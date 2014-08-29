@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     Window window;
     //QDir::setCurrent(QCoreApplication::applicationDirPath());
 
-    window.move(300, 300);
+    window.move(200, 200);
     window.setWindowTitle("Path Of Exile Skill Tree");
     window.show();
 

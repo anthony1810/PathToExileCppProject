@@ -50,4 +50,13 @@ void SkillPanel::changeFirstDes(QString des){
     Description1->setPlainText(des);
 }
 
+SkillPanel::~SkillPanel(){
+    this->~QGraphicsScene();
+    delete img1;
+    delete skillNameItem1;
+    delete Description1;
+
+    delete skillPointItem;
+}
+
 
