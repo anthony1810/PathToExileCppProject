@@ -22,7 +22,7 @@ void HeroPanel::buildGui(QString imageSource, int str, int dex, int intel, QStri
 
     //add name
     heroNameItem = this->addText(QString("Marauder"));
-    heroNameItem->setPos(10,myImage.height());
+    heroNameItem->setPos(0,myImage.height());
     heroNameItem->setFont(serifFont);
 
 

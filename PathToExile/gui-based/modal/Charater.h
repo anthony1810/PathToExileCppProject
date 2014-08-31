@@ -33,6 +33,9 @@ public:
     std::string getInfo();
     std::string get_charID();
     std::string get_classType();
+    int getStr();
+    int getDex();
+    int getInt();
     int get_starting_pos();
 };
 

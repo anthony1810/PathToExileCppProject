@@ -13,9 +13,9 @@ void SkillPanel2::buildGui(QString img,QString name, QString des){
     //add image
     QPixmap myImage2(img);
     img2 = this->addPixmap(myImage2);
-    img2->setPos(50,secondSkillY);
+    img2->setPos(100,secondSkillY);
     skillNameItem2=this->addText(name);
-    skillNameItem2->setPos(0,secondSkillY+27);
+    skillNameItem2->setPos(90,secondSkillY+27);
     skillNameItem2->setFont(serifFont);
 
     Description2=this->addText(des);

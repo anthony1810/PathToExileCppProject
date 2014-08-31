@@ -17,6 +17,10 @@
 #include <QGraphicsScene>
 #include <QLineEdit>
 #include <QMessageBox>
+#include "modal/DataPopulater.h"
+#include "modal/Charater.h"
+#include "modal/Class.h"
+#include "modal/Shortest.h"
 
 class CenterControl : public QTabWidget
 {
@@ -34,14 +38,22 @@ class CenterControl : public QTabWidget
     QWidget* shortestPathTab;
     QLabel *heroTitle;
     QLabel *desTitle;
+     QLineEdit* refundPointTxt;
 
     //Custom Shortest Path
-  //  QWidget* customShortestTab;
-//    QGridLayout* cusGrid;
-//    QPushButton* cusShortestButton;
-//    QLabel* initialNodeLabel;
-//    QComboBox* initialNode;
-
+    QWidget* customShortestTab;
+    QGridLayout* cusGrid;
+    QPushButton* cusShortestButton;
+    QLabel* initialNodeLabel;
+    QComboBox* initialNode;
+std::vector<Node> skillList;
+std::vector<string> user_stas;
+std::vector<int> user_tree;
+Shortest s;
+std::vector<Character> characterList;
+typedef std::map<int,int>  MAP;
+typedef std::pair<int,int> PAIR;
+int heroIndex;
 
     QWidget* writeTab;
     QGridLayout* grid2;
@@ -54,6 +66,7 @@ public:
     CenterControl(QWidget *parent = 0, HeroPanel* heroPanel=0, HeroDescription* desPanel=0, SkillPanel* skillPanel1=0, SkillPanel2* skillPanel2=0, QGraphicsScene* sceneCenter=0,QProgressBar* progressBar=0);
     ~CenterControl();
     void buildGui();
+    int get_new_pos(int desNode,int& max_node);
 signals:
 
 public slots:

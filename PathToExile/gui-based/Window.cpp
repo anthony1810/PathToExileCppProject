@@ -10,7 +10,7 @@ Window::Window(QWidget *parent)
     grid->addWidget(new QLabel("HERO INFO"),1,1,1,1,Qt::AlignCenter);
     leftView = new QGraphicsView();
     leftView->resize(1000,1000);
-    heroPanel = new HeroPanel(leftView, "img/marauder-large.png", 32,14,14,"");
+    heroPanel = new HeroPanel(leftView, "img/Witch_avatar.png", 14,14,32,"");
     leftView->setScene(heroPanel);
     grid->addWidget(leftView,2,0,1,3);
 
@@ -25,7 +25,7 @@ Window::Window(QWidget *parent)
 
     grid->addWidget(new QLabel("INITIAL SKILL"),1,8,1,3, Qt::AlignCenter);
     rightView = new QGraphicsView(this);
-    skillPanel = new SkillPanel(this,0,0,"Lord Of The Dead","haha");
+    skillPanel = new SkillPanel(this,"img/qtm.gif","?","?");
     rightView->setScene(skillPanel);
     grid->addWidget(rightView,2,8,1,3);
 

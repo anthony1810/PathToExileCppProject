@@ -1,32 +1,31 @@
 #include "skillpanel.h"
 
-SkillPanel::SkillPanel(QObject* parent, int img_x, int img_y,QString name, QString des)
+SkillPanel::SkillPanel(QObject* parent, QString img,QString name, QString des)
 {
     this->setParent(parent);
     imgSrc.load("img/imgSrc.jpg");
-    buildGui(img_x,img_y, name, des);
+    buildGui(img, name, des);
 }
 
-void SkillPanel::buildGui(int img_x, int img_y,QString name, QString des){
+void SkillPanel::buildGui(QString img,QString name, QString des){
     //add picture
-    QPixmap myImage = imgSrc.copy(img_x,img_y,27,27);
+    QPixmap myImage(img);
     img1 = this->addPixmap(myImage);
-    img1->setPos(50,0);
+    img1->setPos(90,0);
 
     //font list
     QFont serifFont("Times", 12, QFont::Bold);
 
     //add name
     skillNameItem1 = this->addText(name);
-    skillNameItem1->setPos(0,myImage.height());
+    skillNameItem1->setPos(80,27);
     skillNameItem1->setFont(serifFont);
 
 
 
     //add strength
-    int strYAt = myImage.height()+20;
     Description1 = this->addText(des);
-    Description1->setPos(0, strYAt+20);
+    Description1->setPos(0, 67);
 }
 
 void SkillPanel::updateGui(){
@@ -37,8 +36,8 @@ void SkillPanel::updateGui(){
     this->update();
 }
 
-void SkillPanel::changeFirstImg(int img_x, int img_y){
-    QPixmap myImage = imgSrc.copy(img_x,img_y,27,27);
+void SkillPanel::changeFirstImg(int img_x, int img_y, int imgW, int imgH){
+    QPixmap myImage = imgSrc.copy(img_x,img_y,imgW,imgH);
     img1->setPixmap(myImage);
 }
 

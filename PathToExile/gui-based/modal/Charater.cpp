@@ -49,3 +49,15 @@ std::string Character::get_classType(){
 int Character::get_starting_pos(){
     return starting_pos;
 }
+
+int Character::getStr(){
+    return strength;
+}
+
+int Character::getDex(){
+    return dexterity;
+}
+
+int Character::getInt(){
+    return intelligence;
+}

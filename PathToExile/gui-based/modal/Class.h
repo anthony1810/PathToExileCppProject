@@ -24,6 +24,7 @@ public:
 	int get_width();
 	int get_height();
 };
+
 class Node{
 	
 	
